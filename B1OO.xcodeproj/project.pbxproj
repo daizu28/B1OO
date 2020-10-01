@@ -15,6 +15,8 @@
 		3F0EE46A25230EFA0010538A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0EE46825230EFA0010538A /* LaunchScreen.storyboard */; };
 		3F0EE47525230EFB0010538A /* B1OOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0EE47425230EFB0010538A /* B1OOTests.swift */; };
 		3F0EE48025230EFB0010538A /* B1OOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0EE47F25230EFB0010538A /* B1OOUITests.swift */; };
+		3F16E2AC2525B8BD0090958D /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16E2AB2525B8BD0090958D /* CardViewController.swift */; };
+		3F16E2B12525C16B0090958D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F16E2B02525C16B0090958D /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3F0EE47B25230EFB0010538A /* B1OOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = B1OOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0EE47F25230EFB0010538A /* B1OOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B1OOUITests.swift; sourceTree = "<group>"; };
 		3F0EE48125230EFB0010538A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F16E2AB2525B8BD0090958D /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardViewController.swift; path = ../CardViewController.swift; sourceTree = "<group>"; };
+		3F16E2B02525C16B0090958D /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 		3F0EE45C25230EF40010538A /* B1OO */ = {
 			isa = PBXGroup;
 			children = (
+				3F16E2AB2525B8BD0090958D /* CardViewController.swift */,
+				3F16E2B02525C16B0090958D /* CustomCell.swift */,
 				3F0EE45D25230EF40010538A /* AppDelegate.swift */,
 				3F0EE45F25230EF40010538A /* SceneDelegate.swift */,
 				3F0EE46125230EF40010538A /* ViewController.swift */,
-				3F0EE46325230EF40010538A /* Main.storyboard */,
 				3F0EE46625230EFA0010538A /* Assets.xcassets */,
+				3F0EE46325230EF40010538A /* Main.storyboard */,
 				3F0EE47325230EFB0010538A /* B1OOTests */,
 				3F0EE46825230EFA0010538A /* LaunchScreen.storyboard */,
 				3F0EE46B25230EFA0010538A /* Info.plist */,
@@ -258,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F16E2AC2525B8BD0090958D /* CardViewController.swift in Sources */,
 				3F0EE46225230EF40010538A /* ViewController.swift in Sources */,
+				3F16E2B12525C16B0090958D /* CustomCell.swift in Sources */,
 				3F0EE45E25230EF40010538A /* AppDelegate.swift in Sources */,
 				3F0EE46025230EF40010538A /* SceneDelegate.swift in Sources */,
 			);

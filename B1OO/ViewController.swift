@@ -12,7 +12,9 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     
     //collectionViewのoutlet　関連付けをする
     @IBOutlet var collectionView: UICollectionView!
-
+    
+    //背景を宣言
+    @IBOutlet var backgroundImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         
     }
     
-    
+    //1つのセクションのなかに表示するセル(要素)の数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //表示するセルの数
         return 8
@@ -34,8 +36,18 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         //表示するセルを登録(さっき名前つけたやつ)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        //セルの色
-        cell.backgroundColor = .red
+        
+        
+        //imageviewに画像を反映してみる
+        //お手本がタグを使ってインスタンスを作ってるのでやってみる
+//        let photoImageView = cell.contentView.viewWithTag(1) as! UIImageView
+//        let photoImage = UIImage(named:  "checked")
+//        photoImageView.image = photoImage
+        
+        var img = UIImage(named: "checked")
+        backgroundImage = UIImage(image: img)
+        
+//        cell.backgroundColor = .red
         //ここまでのセルの設定を返してる？
         return cell
     }
@@ -44,7 +56,7 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) ->CGSize{
         //横方向のスペースを調整
         let horizontalSpace : CGFloat = 10
-        let cellSize : CGFloat = self.view.bounds.width / 2.5 - horizontalSpace
+        let cellSize : CGFloat = self.view.bounds.width / 4 - horizontalSpace
         //正方形にするためにwidthとheightを同じにする
         return CGSize(width: cellSize, height: cellSize)
     }
