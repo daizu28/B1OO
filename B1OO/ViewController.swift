@@ -15,6 +15,10 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
     
     //背景を宣言
     @IBOutlet var backgroundImage: UIImageView!
+    //やることを表示するラベルを宣言
+    @IBOutlet var text: UILabel!
+    //個々のカードに飛ぶためのボタンを宣言
+    @IBOutlet var individual: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,24 +44,25 @@ class ViewController: UIViewController,UICollectionViewDataSource, UICollectionV
         
         //imageviewに画像を反映してみる
         //お手本がタグを使ってインスタンスを作ってるのでやってみる
-//        let photoImageView = cell.contentView.viewWithTag(1) as! UIImageView
-//        let photoImage = UIImage(named:  "checked")
-//        photoImageView.image = photoImage
+        let photoImageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let photoImage = UIImage(named:  "checked")
+        photoImageView.image = photoImage
         
-        var img = UIImage(named: "checked")
-        backgroundImage = UIImage(image: img)
-        
+        //背景色は変えられる
 //        cell.backgroundColor = .red
+        
         //ここまでのセルの設定を返してる？
         return cell
     }
     
     //セルの大きさや隙間を調整する
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) ->CGSize{
+        
         //横方向のスペースを調整
         let horizontalSpace : CGFloat = 10
         let cellSize : CGFloat = self.view.bounds.width / 4 - horizontalSpace
-        //正方形にするためにwidthとheightを同じにする
+        
+        //正方形にするためにwidthとheightを同じにしている
         return CGSize(width: cellSize, height: cellSize)
     }
 
